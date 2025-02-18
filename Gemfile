@@ -24,10 +24,10 @@ end
 
 group :development, :test do
   if rails_version == "main"
-    gem "rails", github: "rails/rails", branch: "main"
+    gem "rails", ">= 7.2.0", github: "rails/rails", branch: "main"
   else
     rails_version = CURRENT_RAILS_VERSION if rails_version == "current"
-    gem "rails", "~> #{rails_version}.0"
+    gem "rails", ">= 7.2.0", "~> #{rails_version}.0"
   end
   if rails_version == "7.0"
     gem "sqlite3", "~> 1.4"
